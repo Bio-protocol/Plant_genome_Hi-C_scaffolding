@@ -8,11 +8,11 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 ## Software dependencies
 [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)  
 [Juicer](https://github.com/aidenlab/juicer/)   
-[3D-DNA pipeline](https://github.com/aidenlab/3d-dna)
-[Juicebox](https://github.com/aidenlab/Juicebox)
-[BWA](http://bio-bwa.sourceforge.net/)
-[BUSCO](https://gitlab.com/ezlab/busco)
-[Java 1.8 JDK](https://www.oracle.com/java/technologies/downloads/#java8)
+[3D-DNA pipeline](https://github.com/aidenlab/3d-dna)   
+[Juicebox](https://github.com/aidenlab/Juicebox)   
+[BWA](http://bio-bwa.sourceforge.net/)   
+[BUSCO](https://gitlab.com/ezlab/busco)   
+[Java 1.8 JDK](https://www.oracle.com/java/technologies/downloads/#java8)   
 
 
 
