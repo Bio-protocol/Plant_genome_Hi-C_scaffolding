@@ -76,8 +76,10 @@ sh ../scripts/juicer.sh -g your_contigs -s DpnII -p ../restriction_sites/your_co
 
 cd ..
 ```
-__Tips:__ Check juicer.sh, make sure all the queue name, queue_time, and threads fit your SLURM or SLF scheduler. If not, you may need to edit them in juicer.sh manually.
+__Tips:__ Check _juicer.sh_, make sure all the queue name, queue_time, and threads fit your SLURM or SLF scheduler. If not, you may need to edit them in juicer.sh manually.  
+Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named __merged_nodups.txt__ in __your_contigs_hic/aligned__ will be used by 3D-DNA pipeline.
 
+### 5. Run 3D-DNA pipeline
 
 ![](graphs/juicebox_1.jpg)
 
