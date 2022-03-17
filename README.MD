@@ -63,8 +63,21 @@ c. Filter and clean raw Hi-C sequencing data
 ```
 wget https://github.com/usadellab/Trimmomatic/files/5854859/Trimmomatic-0.39.zip
 unzip Trimmomatic-0.39.zip
+
 java -jar ./Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 12 -phred33 -trimlog trimmomatic.log your_hic_R1.fastq.gz your_hic_R2.fastq.gz your_hic_pair_R1.fastq.gz your_hic_unpair_R1.fastq.gz your_hic_pair_R2.fastq.gz your_hic_unpair_R2.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 ```
+### 4. Run Juicer to obtain the interaction matrix
+```
+mkdir your_contigs_hic; cd your_contigs_hic
+mkdir fastq
+ln -s ../your_hic_pair* ./fastq/
+
+sh ../scripts/juicer.sh -g your_contigs -s DpnII -p ../restriction_sites/your_contigs.chrom.sizes -y ../restriction_sites/your_contigs_DpnII.txt -z ../references/your_contig.fasta -Q 2-00:00 -L 7-00:00
+
+cd ..
+```
+__Tips:__ Check juicer.sh, make sure all the queue name, queue_time, and threads fit your SLURM or SLF scheduler. If not, you may need to edit them in juicer.sh manually.
+
 
 ![](graphs/juicebox_1.jpg)
 
