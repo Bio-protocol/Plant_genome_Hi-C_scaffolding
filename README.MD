@@ -14,6 +14,30 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 [BUSCO](https://gitlab.com/ezlab/busco)   
 [Java 1.8 JDK](https://www.oracle.com/java/technologies/downloads/#java8)   
 
+## Input data
+1. _De novo_ assembly contigs file in FASTA format   
+2. Raw Hi-C sequencing data in FASTQ format
+
+## Procedure
+More details can be found in the paper
+
+### Equipment required:
+1. Linux server or cluster with SLURM or SLF scheduler   
+2. PC with at least 16GB RAM for handling big genomes (>1GB)
+### Install and configure Juicer
+```
+mkdir hic; cd hic
+
+git clone https://github.com/theaidenlab/juicer.git
+
+ln -s juicer/SLURM/scripts/ scripts
+
+cd scripts; wget https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar
+ln -s juicer_tools.1.9.9_jcuda.0.8.jar juicer_tools.jar; cd ../
+
+mkdir references
+mkdir restriction_sites
+```
 
 
 ![](graphs/juicebox_1.jpg)
