@@ -16,6 +16,8 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 
 
 
+![](graphs/juicebox_1.jpg)
+
 
 ## License
 It is a free and open source software, licensed under [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt)
