@@ -21,10 +21,10 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 ## Procedure
 More details can be found in the paper
 
-### Equipment required:
-1. Linux server or cluster with SLURM or SLF scheduler   
-2. PC with at least 16GB RAM for handling big genomes (>1GB)
-### Install and configure Juicer
+### 1. Equipment required:
+a. Linux server or cluster with SLURM or SLF scheduler   
+b. PC with at least 16GB RAM for handling big genomes (>1GB)
+### 2. Install and configure Juicer
 ```
 mkdir hic; cd hic
 
@@ -38,6 +38,28 @@ ln -s juicer_tools.1.9.9_jcuda.0.8.jar juicer_tools.jar; cd ../
 mkdir references
 mkdir restriction_sites
 ```
+### 3. Prepare input data for Juicer
+a. Copy your_contigs.fasta file (or make soft link) into reference path, and index it with bwa index 
+```
+ln -s your_path/your_contigs.fasta ./references
+cd ./reference; bwa index your_contig.fasta; cd ..
+```
+b. Prepare enzyme site file for your_contigs.fasta
+```
+cd restriction_sites
+wget https://raw.githubusercontent.com/aidenlab/juicer/main/misc/generate_site_positions.py
+```
+Then, Use vi or vim to edit generate_site_positions.py, insert the following line in line 25:
+```
+'your_contigs': '../reference/your_contigs.fasta',
+```
+After that:
+```
+python generate_site_positions.py DpnII your_contigs
+awk 'BEGIN{OFS="\t"}{print $1, $NF}' your_contigs_DpnII.txt > your_contigs.chrom.sizes
+cd ..
+```
+
 
 
 ![](graphs/juicebox_1.jpg)
