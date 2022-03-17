@@ -42,7 +42,7 @@ mkdir restriction_sites
 a. Copy your_contigs.fasta file (or make soft link) into reference path, and index it with bwa index 
 ```
 ln -s your_path/your_contigs.fasta ./references
-cd ./reference; bwa index your_contig.fasta; cd ..
+cd ./references; bwa index your_contig.fasta; cd ..
 ```
 b. Prepare enzyme site file for your_contigs.fasta
 ```
@@ -51,7 +51,7 @@ wget https://raw.githubusercontent.com/aidenlab/juicer/main/misc/generate_site_p
 ```
 Then, Use vi or vim to edit generate_site_positions.py, insert the following line in line 25:
 ```
-'your_contigs': '../reference/your_contigs.fasta',
+'your_contigs': '../references/your_contigs.fasta',
 ```
 After that:
 ```
@@ -59,8 +59,12 @@ python generate_site_positions.py DpnII your_contigs
 awk 'BEGIN{OFS="\t"}{print $1, $NF}' your_contigs_DpnII.txt > your_contigs.chrom.sizes
 cd ..
 ```
-
-
+c. Filter and clean raw Hi-C sequencing data
+```
+wget https://github.com/usadellab/Trimmomatic/files/5854859/Trimmomatic-0.39.zip
+unzip Trimmomatic-0.39.zip
+java -jar ./Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 12 -phred33 -trimlog trimmomatic.log your_hic_R1.fastq.gz your_hic_R2.fastq.gz your_hic_pair_R1.fastq.gz your_hic_unpair_R1.fastq.gz your_hic_pair_R2.fastq.gz your_hic_unpair_R2.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+```
 
 ![](graphs/juicebox_1.jpg)
 
