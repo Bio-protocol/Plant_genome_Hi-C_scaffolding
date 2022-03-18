@@ -100,6 +100,24 @@ c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.as
 
 d. Correct scaffolding manually 
 ### 7. Run 3D-DNA pipeline again to update the manual modification
+a. Upload your_contigs.FINAL.edit.assembly to cluster and put it in your_contigs_hic.
+b. Run 3D-DNA pipeline to obtain your edited scaffolds fasta file
+```
+../3d-dna/run-asm-pipeline-post-review.sh -r your_contigs.FINAL.edit.assembly ../references/your_contigs.fasta aligned/merged_nodups.txt
+```
+### 8. Primarily estimate the scaffolding with BUSCO
+a. Install BUSCO, and download database
+```
+conda install -c bioconda busco
+
+mkdir busco_evalue; cd busco_evalue
+wget https://busco-data.ezlab.org/v4/data/lineages/embryophyta_odb10.2020-09-10.tar.gz
+tar -zxf embryophyta_odb10.2020-09-10.tar.gz
+```
+b. Run BUSCO
+```
+busco -c 14 -m genome -i ../your_contigs_hic/your_contigs.FINAL.fasta -o your_contigs_hic_busco -l ./embryophyta_odb10
+```
 
 ## License
 It is a free and open source software, licensed under [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt)
