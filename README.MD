@@ -80,6 +80,17 @@ __Tips:__ Check _juicer.sh_, make sure all the queue name, queue_time, and threa
 Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named __merged_nodups.txt__ in __your_contigs_hic/aligned__ will be used by 3D-DNA pipeline.
 
 ### 5. Run 3D-DNA pipeline
+```
+wget https://github.com/aidenlab/3d-dna/archive/refs/tags/201008.tar.gz
+tar -zxf 201008.tar.gz
+chmod 554 ./3d-dna-201008/*.sh  ##add execute permission
+
+cd your_contigs_hic
+../3d-dna-201008/run-asm-pipeline.sh ../references/your_contigs.fasta ./aligned/merged_nodups.txt
+```
+__Tips:__ If the scaffolding results are not ideal, try different _--round_ different edit round and slightly increase _--editor-repeat-coverage_ misjoin editor threshold repeat coverage. In this case study, we use --editor-repeat-coverage 3.
+After the job is done. Two files named __your_contigs.FINAL.assembly__ and __your_contigs.rawchrom.hic__ will be used by Juicebox
+
 
 ![](graphs/juicebox_1.jpg)
 
