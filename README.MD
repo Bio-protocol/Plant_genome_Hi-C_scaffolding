@@ -91,9 +91,15 @@ cd your_contigs_hic
 __Tips:__ If the scaffolding results are not ideal, try different _--round_ different edit round and slightly increase _--editor-repeat-coverage_ misjoin editor threshold repeat coverage. In this case study, we use --editor-repeat-coverage 3.
 After the job is done. Two files named __your_contigs.FINAL.assembly__ and __your_contigs.rawchrom.hic__ will be used by Juicebox
 
+### 6. Visualize and modify the scaffolding with Juicebox
+a. Download JuiceboxGUI from https://github.com/aidenlab/JuiceboxGUI/releases/download/v3.1.4/juicebox.jar  
+b. Download your_contigs.FINAL.assembly and your_contigs.rawchrom.hic to your PC  
+c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn  
 
 ![](graphs/juicebox_1.jpg)
 
+d. Correct scaffolding manually 
+### 7. Run 3D-DNA pipeline again to update the manual modification
 
 ## License
 It is a free and open source software, licensed under [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt)
