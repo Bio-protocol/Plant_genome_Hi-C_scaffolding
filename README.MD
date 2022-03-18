@@ -96,7 +96,7 @@ a. Download JuiceboxGUI from https://github.com/aidenlab/JuiceboxGUI/releases/do
 b. Download your_contigs.FINAL.assembly and your_contigs.rawchrom.hic to your PC  
 c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn  
 
-![](graphs/juicebox_1.jpg)
+![](graphs/juicebox.jpg)
 
 d. Correct scaffolding manually 
 ### 7. Run 3D-DNA pipeline again to update the manual modification
