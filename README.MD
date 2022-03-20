@@ -97,8 +97,11 @@ b. Download your_contigs.FINAL.assembly and your_contigs.rawchrom.hic to your PC
 c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn  
 
 ![](graphs/juicebox.jpg)
-
+Figure 1. Steps to load .hic and .assembly file to Juicebox. A. Load .hic file; B. Load .assembly file.
 d. Correct scaffolding manually 
+![](graphs/juicebox_2.jpg)
+Figure 2. Manually correct the scaffolding with Juicebox. A. the original scaffolding visilization B. manually corrected scaffolding. Ex. 1: misjoin, Ex. 2: mis-oritention
+
 ### 7. Run 3D-DNA pipeline again to update the manual modification
 a. Upload your_contigs.FINAL.edit.assembly to cluster and put it in your_contigs_hic.
 b. Run 3D-DNA pipeline to obtain your edited scaffolds fasta file
