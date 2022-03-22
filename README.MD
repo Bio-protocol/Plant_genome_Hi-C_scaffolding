@@ -124,7 +124,7 @@ tar -zxf embryophyta_odb10.2020-09-10.tar.gz
 ```
 b. Run BUSCO
 ```
-busco -c 14 -m genome -i ../your_contigs_hic/your_contigs.FINAL.fasta -o your_contigs_hic_busco -l ./embryophyta_odb10
+busco -c 14 -m genome -i ../your_contigs_hic/your_contigs_HiC.fasta -o your_contigs_hic_busco -l ./embryophyta_odb10
 ```
 c. Check the BUSCO value and components (Figure 4)
 
