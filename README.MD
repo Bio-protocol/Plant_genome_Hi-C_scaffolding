@@ -92,7 +92,7 @@ __Tips:__ If the scaffolding results are not ideal, try different _--round_ diff
 After the job is done. Two files named __your_contigs.FINAL.assembly__ and __your_contigs.rawchrom.hic__ will be used by Juicebox
 
 ### 6. Visualize and modify the scaffolding with Juicebox
-a. Download JuiceboxGUI from https://github.com/aidenlab/JuiceboxGUI/releases/download/v3.1.4/juicebox.jar  
+a. Download Juicebox v1.11.08 from https://github.com/aidenlab/Juicebox/wiki/Download  
 b. Download your_contigs.FINAL.assembly and your_contigs.rawchrom.hic to your PC  
 c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn  
 
