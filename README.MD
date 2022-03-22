@@ -94,11 +94,11 @@ After the job is done. Two files named __your_contigs.FINAL.assembly__ and __you
 ### 6. Visualize and modify the scaffolding with Juicebox
 a. Download Juicebox v1.11.08 from https://github.com/aidenlab/Juicebox/wiki/Download  
 b. Download your_contigs.FINAL.assembly and your_contigs.rawchrom.hic to your PC  
-c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn  
+c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.assembly in turn (Figure 1)  
 
 ![](graphs/juicebox.jpg)
 __Figure 1. Steps to load .hic and .assembly file to Juicebox.__ A. Load .hic file; B. Load .assembly file.   
-d. Correct scaffolding manually   
+d. Correct scaffolding manually (Figure 2 and Figure 3)   
 1. Shift+left-click to choose the region that needs to be edited.   
 2. Right-click to choose to remove or add chr boundaries.   
 3. Move the mouse to the upper-right of the selected region until a circle appears, and then left-click to rotate the selected region   
@@ -126,6 +126,8 @@ b. Run BUSCO
 ```
 busco -c 14 -m genome -i ../your_contigs_hic/your_contigs.FINAL.fasta -o your_contigs_hic_busco -l ./embryophyta_odb10
 ```
+c. Check the BUSCO value and components (Figure 4)
+
 ![](graphs/busco.jpg)
 __Figure 4. BUSCO summary information.__
 ## License
