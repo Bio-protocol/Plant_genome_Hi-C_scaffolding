@@ -31,6 +31,7 @@ mkdir hic; cd hic
 git clone https://github.com/theaidenlab/juicer.git
 
 ln -s juicer/SLURM/scripts/ scripts
+ln -s juicer/SLURM/scripts/ juicer/scripts/
 
 cd scripts; wget https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar
 ln -s juicer_tools.1.9.9_jcuda.0.8.jar juicer_tools.jar; cd ../
