@@ -98,9 +98,14 @@ c. Run Juicebox, then load  your_contigs.rawchrom.hic and  your_contigs.FINAL.as
 
 ![](graphs/juicebox.jpg)
 __Figure 1. Steps to load .hic and .assembly file to Juicebox.__ A. Load .hic file; B. Load .assembly file.   
-d. Correct scaffolding manually 
+d. Correct scaffolding manually   
+1. Shift+left-click to choose the region that needs to be edited.   
+2. Right-click to choose to remove or add chr boundaries.   
+3. Move the mouse to the upper-right of the selected region until a circle appears, and then left-click to rotate the selected region   
+![](graphs/juicebox_2-1.jpg)
+__Figure 2. Examples of how to edit misjoin and misorientation.__ A. edit misjoin via remove and add chr boundaries. B. edit misorientation by rotating scaffold.  
 ![](graphs/juicebox_2.jpg)
-__Figure 2. Manually correct the scaffolding with Juicebox.__ A. the original scaffolding visilization B. manually corrected scaffolding. Ex. 1: misjoin, Ex. 2: mis-oritention
+__Figure 3. Manually correct the scaffolding with Juicebox.__ A. the original scaffolding visilization B. manually corrected scaffolding. Ex. 1: misjoin, Ex. 2: mis-oritention
 
 ### 7. Run 3D-DNA pipeline again to update the manual modification
 a. Upload your_contigs.FINAL.edit.assembly to cluster and put it in your_contigs_hic.
@@ -121,6 +126,7 @@ b. Run BUSCO
 ```
 busco -c 14 -m genome -i ../your_contigs_hic/your_contigs.FINAL.fasta -o your_contigs_hic_busco -l ./embryophyta_odb10
 ```
-
+![](graphs/busco.jpg)
+__Figure 4. BUSCO summary information.__
 ## License
 It is a free and open source software, licensed under [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt)
