@@ -31,7 +31,6 @@ mkdir hic; cd hic
 git clone https://github.com/theaidenlab/juicer.git
 
 ln -s juicer/SLURM/scripts/ scripts
-ln -s juicer/SLURM/scripts/ juicer/scripts/
 
 cd scripts; wget https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar
 ln -s juicer_tools.1.9.9_jcuda.0.8.jar juicer_tools.jar; cd ../
@@ -73,7 +72,7 @@ mkdir your_contigs_hic; cd your_contigs_hic
 mkdir fastq
 ln -s ../your_hic_pair* ./fastq/
 
-sh ../scripts/juicer.sh -g your_contigs -s DpnII -p ../restriction_sites/your_contigs.chrom.sizes -y ../restriction_sites/your_contigs_DpnII.txt -z ../references/your_contig.fasta -Q 2-00:00 -L 7-00:00
+sh ../scripts/juicer.sh -D $pwd/hic -g your_contigs -s DpnII -p ../restriction_sites/your_contigs.chrom.sizes -y ../restriction_sites/your_contigs_DpnII.txt -z ../references/your_contig.fasta -Q 2-00:00 -L 7-00:00
 
 cd ..
 ```
