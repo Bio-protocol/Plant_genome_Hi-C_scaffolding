@@ -15,7 +15,7 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 [Java 1.8 JDK](https://www.oracle.com/java/technologies/downloads/#java8)   
 
 ## Input data
-1. _De novo_ assembly contigs file in FASTA format, contigs used in this study can be downloaded [HERE](https://drive.google.com/file/d/16eCMD6kg0zCrO3C3sDBEqc8OwnYfTEXY/view?usp=sharing)   
+1. _De novo_ assembly contigs file in FASTA format, contigs used in this study can be downloaded [HERE](https://zenodo.org/record/6383215#.YjzdkufMKCp)   
 2. Raw Hi-C sequencing data in FASTQ format, fastq files used in this study can be downloaed [HERE]()
 
 ## Procedure
