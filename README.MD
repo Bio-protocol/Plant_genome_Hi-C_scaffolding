@@ -11,6 +11,7 @@ Hi-C is a chromosome conformation capture method that was originally developed t
 [3D-DNA pipeline](https://github.com/aidenlab/3d-dna)   
 [Juicebox](https://github.com/aidenlab/Juicebox)   
 [BWA](http://bio-bwa.sourceforge.net/)   
+[Samtools](http://www.htslib.org/)   
 [BUSCO](https://gitlab.com/ezlab/busco)   
 [Java 1.8 JDK](https://www.oracle.com/java/technologies/downloads/#java8)   
 
@@ -72,11 +73,11 @@ mkdir your_contigs_hic; cd your_contigs_hic
 mkdir fastq
 ln -s ../your_hic_pair* ./fastq/
 
-sh ../scripts/juicer.sh -D $pwd/hic -g your_contigs -s DpnII -p ../restriction_sites/your_contigs.chrom.sizes -y ../restriction_sites/your_contigs_DpnII.txt -z ../references/your_contig.fasta -Q 2-00:00 -L 7-00:00
+sh ../scripts/juicer.sh -D $pwd/hic -g your_contigs -s DpnII -p ../restriction_sites/your_contigs.chrom.sizes -y ../restriction_sites/your_contigs_DpnII.txt -z ../references/your_contig.fasta -Q 2-00:00 -L 7-00:00 -q your_queue_name -l your_long_queue_name -t 24 -A your_account --assembly
 
 cd ..
 ```
-__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your SLURM or SLF scheduler. If not, you may need to add or edit them in juicer.sh manually.  
+__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your SLURM or SLF scheduler. To be safe, add these parameters to your command line.  
 Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named __merged_nodups.txt__ in __your_contigs_hic/aligned__ will be used by 3D-DNA pipeline.
 
 ### 5. Run 3D-DNA pipeline
