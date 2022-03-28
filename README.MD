@@ -77,7 +77,7 @@ sh ../scripts/juicer.sh -D $pwd/hic -g your_contigs -s DpnII -p ../restriction_s
 
 cd ..
 ```
-__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your SLURM or SLF scheduler. To be safe, add these parameters to your command line.  
+__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your SLURM or SLF scheduler. To be safe, add these parameters to your command line or modify _juicer.sh_ manually.  
 Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named __merged_nodups.txt__ in __your_contigs_hic/aligned__ will be used by 3D-DNA pipeline.
 
 ### 5. Run 3D-DNA pipeline
