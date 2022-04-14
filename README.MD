@@ -104,7 +104,7 @@ d. Correct scaffolding manually (Figure 2 and Figure 3)
 2. Right-click to choose to remove or add chr boundaries.   
 3. Move the mouse to the upper-right of the selected region until a circle appears, and then left-click to rotate the selected region   
 ![](graphs/juicebox_2-1.jpg)
-__Figure 2. Examples of how to edit misjoin and misorientation.__ A. edit misjoin via remove and add chr boundaries. B. edit misorientation by rotating scaffold.  
+__Figure 2. Examples of how to edit misjoin and misorientation.__ A. edit misjoin via remove and add chr boundaries. B. edit misorientation by rotating selected contigs.  
 ![](graphs/juicebox_2.jpg)
 __Figure 3. Manually correct the scaffolding with Juicebox.__ A. the original scaffolding visilization B. manually corrected scaffolding. Ex. 1: misjoin, Ex. 2: mis-oritention
 
