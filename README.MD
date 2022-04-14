@@ -90,7 +90,7 @@ cd your_contigs_hic
 ../3d-dna-201008/run-asm-pipeline.sh ../references/your_contigs.fasta ./aligned/merged_nodups.txt
 ```
 __Tips:__ If the scaffolding results are not ideal, try different _--round_ different edit round and slightly increase _--editor-repeat-coverage_ misjoin editor threshold repeat coverage. In this case study, we use --editor-repeat-coverage 3.
-After the job is done. Two files named __your_contigs.FINAL.assembly__ and __your_contigs.rawchrom.hic__ will be used by Juicebox
+After the job is done. Two files named __your_contigs.rawchrom.assembly__ and __your_contigs.rawchrom.hic__ will be used by Juicebox
 
 ### 6. Visualize and modify the scaffolding with Juicebox
 a. Download Juicebox v1.11.08 from https://github.com/aidenlab/Juicebox/wiki/Download  
