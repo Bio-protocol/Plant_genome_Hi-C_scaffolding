@@ -39,6 +39,7 @@ ln -s juicer_tools.1.9.9_jcuda.0.8.jar juicer_tools.jar; cd ../
 mkdir references
 mkdir restriction_sites
 ```
+And make sure _samtools_ and _bwa_ are in your _$PATH_
 ### 3. Prepare input data for Juicer
 a. Copy your_contigs.fasta file (or make soft link) into reference path, and index it with bwa index 
 ```
