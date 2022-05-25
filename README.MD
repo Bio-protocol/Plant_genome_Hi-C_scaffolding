@@ -130,7 +130,7 @@ busco -c 14 -m genome -i ../your_contigs_hic/your_contigs_HiC.fasta -o your_cont
 ```
 c. Check the BUSCO value and components (Figure 4)
 
-![](graphs/busco.jpg)
+![](output/busco.jpg)
 __Figure 4. BUSCO summary information.__
 ## License
 It is a free and open source software, licensed under [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt)
