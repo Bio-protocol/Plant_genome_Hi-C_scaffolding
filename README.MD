@@ -46,7 +46,7 @@ Make sure samtools and bwa are in your $PATH
 export PATH=$your_samtools/samtools:$PATH
 export PATH=$your_bwa/bwa:$PATH
 ```
-__Tips:__ Juicer can be run on AWS, LSF, Univa Grid Engine (UGER), SLURM, and a single CPU, users may need to change the command line “ln -s juicer/SLURM/scripts/ scripts” in b. Configure Juicer section to fit their system. For example, use “ln -s juicer/AWS/scripts/ scripts” for AWS scheduler. For macOS users, "curl https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar --output ./" can be used instead of wget. The same thing can also be applied to all the wget command in this protocol.   
+__Tips:__ Juicer can be run on AWS, LSF, Univa Grid Engine (UGER), SLURM, and a single CPU, users may need to change the command line “ln -s juicer/SLURM/scripts/ scripts” in b. Configure Juicer section to fit their system. For example, use “ln -s juicer/AWS/scripts/ scripts” for AWS scheduler. For macOS users, "curl https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar --output ./" can be used instead of _wget_. The same thing can also be applied to all the wget command in this protocol.   
 
 ### 3. Prepare input data for Juicer
 a. Copy your_contigs.fasta file (or make soft link) into reference path, and index it with bwa index 
@@ -76,7 +76,7 @@ unzip Trimmomatic-0.39.zip
 
 java -jar ./Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads your_threads -phred33 -trimlog trimmomatic.log your_hic_R1.fastq.gz your_hic_R2.fastq.gz your_hic_pair_R1.fastq.gz your_hic_unpair_R1.fastq.gz your_hic_pair_R2.fastq.gz your_hic_unpair_R2.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 ```
-__Tips:__ your_contigs, your_enzyme, and your_threads are variable, users need to name their own contig file, choose the specific enzyme they used, and specify how many threads they would like to use. your_hic_R1.fastq.gz, your_hic_R2.fastq.gz are the sequenced raw Hi-C paired-end data    
+__Tips:__ _your_contigs_, _your_enzyme_, and _your_threads_ are variable, users need to name their own contig file, choose the specific enzyme they used, and specify how many threads they would like to use. _your_hic_R1.fastq.gz_, _your_hic_R2.fastq.gz_ are the sequenced raw Hi-C paired-end data    
 ### 4. Run Juicer to obtain the interaction matrix
 ```
 mkdir your_contigs_hic; cd your_contigs_hic
@@ -87,7 +87,7 @@ sh ../scripts/juicer.sh -D $PWD/hic -g your_contigs -s your_enzyme -p ../restric
 
 cd ..
 ```
-__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your cluster’s scheduler. To be safe, add these parameters to your command line. Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named merged_nodups.txt in your_contigs_hic/aligned will be used by 3D-DNA pipeline.   
+__Tips:__ Check _juicer.sh_, make sure all the Partition, Account, QOS and Threads fit your cluster’s scheduler. To be safe, add these parameters to your command line. Juicer will submit jobs to the cluster through the scheduler automatically. After all the jobs are done, the file named __merged_nodups.txt__ in _your_contigs_hic/aligned_ will be used by 3D-DNA pipeline.   
 ### 5. Run 3D-DNA pipeline
 3D-DNA pipeline is designed to correct misassembles and scaffold contigs based on the Hi-C interact matrix. It will generate the scaffolds fasta file, and .hic and .assembly files for visualization in Juicebox.   
 ```
