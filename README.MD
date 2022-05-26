@@ -46,7 +46,7 @@ Make sure samtools and bwa are in your $PATH
 export PATH=$your_samtools/samtools:$PATH
 export PATH=$your_bwa/bwa:$PATH
 ```
-__Tips:__ Juicer can be run on AWS, LSF, Univa Grid Engine (UGER), SLURM, and a single CPU, users may need to change the command line “ln -s juicer/SLURM/scripts/ scripts” in b. Configure Juicer section to fit their system. For example, use “ln -s juicer/AWS/scripts/ scripts” for AWS scheduler. For macOS users, "curl https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar --output ./" can be used instead of _wget_. The same thing can also be applied to all the wget command in this protocol.   
+__Tips:__ Juicer can be run on AWS, LSF, Univa Grid Engine (UGER), SLURM, and a single CPU, users may need to change the command line “ln -s juicer/SLURM/scripts/ scripts” in b. Configure Juicer section to fit their system. For example, use “ln -s juicer/AWS/scripts/ scripts” for AWS scheduler. For macOS users, "curl https://hicfiles.tc4ga.com/public/juicer/juicer_tools.1.9.9_jcuda.0.8.jar --output ./" can be used instead of _wget_. The same thing can also be applied to all the wget in this protocol.   
 
 ### 3. Prepare input data for Juicer
 a. Copy your_contigs.fasta file (or make soft link) into reference path, and index it with bwa index 
