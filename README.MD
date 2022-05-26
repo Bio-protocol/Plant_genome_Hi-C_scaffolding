@@ -107,7 +107,8 @@ b. Download your_contigs.rawchrom.assembly and your_contigs.rawchrom.hic to your
 c. Run Juicebox, then load  your_contigs.rawchrom.hic and your_contigs.rawchrom.assembly in turn (Figure 1)  
 
 ![](graphs/juicebox.jpg)
-__Figure 1. Steps to load .hic and .assembly file to Juicebox.__ A. Load .hic file; B. Load .assembly file.   
+__Figure 1. Steps to load .hic and .assembly file to Juicebox.__ A. Load .hic file; B. Load .assembly file.    
+   
 d. Correct scaffolding manually (Figure 2 and Figure 3)   
 1. Shift+left-click to choose the region that needs to be edited.   
 2. Right-click to choose to remove or add chr boundaries.   
