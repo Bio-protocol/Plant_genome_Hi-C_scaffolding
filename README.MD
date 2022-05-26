@@ -117,6 +117,7 @@ d. Correct scaffolding manually (Figure 2 and Figure 3)
 __Figure 2. Examples of how to edit misjoin and misorientation.__ A. edit misjoin via remove and add chr boundaries. B. edit misorientation by rotating selected contigs.  
 ![](graphs/juicebox_2.jpg)
 __Figure 3. Manually correct the scaffolding with Juicebox.__ A. the original scaffolding visilization B. manually corrected scaffolding. Ex. 1: misjoin, Ex. 2: mis-oritention   
+   
 __Tips:__ Here is a [demo video](https://www.youtube.com/watch?v=Nj7RhQZHM18) show how to use Juicebox from the software developer.
 ### 7. Run 3D-DNA pipeline again to update the manual modification
 a. Upload your_contigs.rawchom.edit.assembly to cluster and put it in your_contigs_hic.
